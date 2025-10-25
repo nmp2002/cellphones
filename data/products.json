@@ -1,0 +1,12 @@
+[
+  {"sku":"SP116","name":"iPhone 12 thường 128 GB","category":"Điện thoại","price":"13.200.000 đ","stock":23,"status":"Còn hàng"},
+  {"sku":"SP014","name":"iPhone 17 thường 256 GB","category":"Điện thoại","price":"24.990.000 đ","stock":34,"status":"Còn hàng"},
+  {"sku":"SP045","name":"IPHONE X","category":"Điện thoại","price":"31.000.000 đ","stock":69,"status":"Còn hàng"},
+  {"sku":"SP005","name":"iPhone 14 Plus 256GB","category":"Điện thoại","price":"23.990.000 đ","stock":22,"status":"Còn hàng"},
+  {"sku":"SP006","name":"Xiaomi 14 Ultra","category":"Điện thoại","price":"22.990.000 đ","stock":15,"status":"Còn hàng"},
+  {"sku":"SP007","name":"OPPO Find X7 Ultra","category":"Điện thoại","price":"20.990.000 đ","stock":12,"status":"Còn hàng"},
+  {"sku":"SP008","name":"Samsung Galaxy Z Fold5","category":"Điện thoại","price":"35.990.000 đ","stock":8,"status":"Sắp hết"},
+  {"sku":"SP009","name":"Samsung Galaxy Z Flip5","category":"Điện thoại","price":"21.990.000 đ","stock":18,"status":"Còn hàng"},
+  {"sku":"SP010","name":"Vivo X100 Pro","category":"Điện thoại","price":"19.990.000 đ","stock":25,"status":"Còn hàng"},
+  {"sku":"SP012","name":"Samsung Galaxy A54","category":"Điện thoại","price":"9.990.000 đ","stock":50,"status":"Còn hàng"}
+]

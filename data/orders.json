@@ -1,0 +1,8 @@
+[
+  {"id":"753e36e1-b869-48a0-99c5-1843b9b390f6","customer":"Nguyễn Văn A","date":"2025-10-21","total":"13.990.000đ","count":0,"status":"Đã giao"},
+  {"id":"4d2b193a-9615-4208-b856-15b03552cebf","customer":"Trần Thị B","date":"2025-10-20","total":"19.990.000đ","count":0,"status":"Chờ xác nhận"},
+  {"id":"375e662a-64ec-4906-b287-a1de89a21ef8","customer":"Lê Văn C","date":"2025-10-19","total":"19.990.000đ","count":0,"status":"Chờ xác nhận"},
+  {"id":"65152a01-974e-473d-8588-33ad9b977264","customer":"Phạm D","date":"2025-10-18","total":"19.990.000đ","count":0,"status":"Chờ xác nhận"},
+  {"id":"b1f2e936-ba6c-415c-8ccf-85fd4f544196","customer":"Hoàng E","date":"2025-10-17","total":"27.480.000đ","count":0,"status":"Chờ xác nhận"},
+  {"id":"12e43170-b784-4ee4-8b0a-a35768d2d5b2","customer":"Nguyễn F","date":"2025-10-16","total":"16.990.000đ","count":0,"status":"Đang xử lý"}
+]
