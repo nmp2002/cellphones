@@ -3,10 +3,30 @@ session_start();
 if (isset($_SESSION['user'])) { header('Location: dashboard.php'); exit; }
 $error = isset($_GET['error']) ? $_GET['error'] : '';
 $success = isset($_GET['success']) ? $_GET['success'] : '';
+require_once __DIR__ . '/db.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  // For demo, accept any registration and pretend to create a user
-  header('Location: index.php?error=' . urlencode('Tạo tài khoản thành công. Bạn có thể đăng nhập.'));
-  exit;
+  $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+  $password = isset($_POST['password']) ? $_POST['password'] : '';
+  $password2 = isset($_POST['password2']) ? $_POST['password2'] : '';
+  if ($email === '' || $password === '' || $password2 === '') {
+    $error = 'Vui lòng điền đầy đủ thông tin';
+  } elseif ($password !== $password2) {
+    $error = 'Mật khẩu xác nhận không khớp';
+  } else {
+    $pdo = getDB();
+    // check exists
+    $c = $pdo->prepare('SELECT COUNT(*) FROM users WHERE email = :email');
+    $c->execute([':email' => $email]);
+    if ($c->fetchColumn()) {
+      $error = 'Email đã tồn tại';
+    } else {
+      $hash = password_hash($password, PASSWORD_DEFAULT);
+      $i = $pdo->prepare('INSERT INTO users (email,password,name,role) VALUES (:email,:password,:name,:role)');
+      $i->execute([':email'=>$email, ':password'=>$hash, ':name'=>$email, ':role'=>'user']);
+      header('Location: index.php?error=' . urlencode('Tạo tài khoản thành công. Bạn có thể đăng nhập.'));
+      exit;
+    }
+  }
 }
 ?>
 <!doctype html>

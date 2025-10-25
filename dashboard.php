@@ -5,10 +5,9 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 $user = $_SESSION['user'];
-$orders = [];
-if (file_exists(__DIR__ . '/data/orders.json')) {
-    $orders = json_decode(file_get_contents(__DIR__ . '/data/orders.json'), true);
-}
+require_once __DIR__ . '/db.php';
+$pdo = getDB();
+$orders = $pdo->query('SELECT * FROM orders ORDER BY date DESC')->fetchAll();
 ?>
 <!doctype html>
 <html lang="vi">

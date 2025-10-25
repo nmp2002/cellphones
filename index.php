@@ -12,13 +12,16 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CellphoneS - Đăng nhập</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
   <div class="container">
     <div class="left">
       <div class="brand">
-        <div class="logo">📱</div>
+        <img src="assets/logo.svg" alt="CellphoneS" class="logo-svg">
         <div>
           <h1>CellphoneS</h1>
           <div class="subtitle">Haravan Management System</div>
@@ -35,7 +38,7 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
           <label>Email</label>
           <div class="input"><span class="icon">✉️</span><input type="email" name="email" value="admin@cellphones.com" required></div>
           <label>Mật khẩu</label>
-          <div class="input"><span class="icon">🔒</span><input type="password" name="password" value="password" required></div>
+          <div class="input password-input"><span class="icon">🔒</span><input id="password" type="password" name="password" value="password" required><button type="button" class="eye" aria-label="Toggle password">👁️</button></div>
           <div class="row space-between">
             <label class="checkbox"><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label>
             <a href="#" id="forgotLink">Quên mật khẩu?</a>
@@ -75,6 +78,8 @@ $error = isset($_GET['error']) ? $_GET['error'] : '';
       </form>
     </div>
   </div>
+
+  <footer class="site-footer">© 2025 CellphoneS. All rights reserved.</footer>
 
   <script src="assets/app.js"></script>
 </body>

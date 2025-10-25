@@ -1,10 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) { header('Location: index.php'); exit; }
-$products = [];
-if (file_exists(__DIR__.'/data/products.json')) {
-  $products = json_decode(file_get_contents(__DIR__.'/data/products.json'), true);
-}
+require_once __DIR__ . '/db.php';
+$pdo = getDB();
+$products = $pdo->query('SELECT * FROM products ORDER BY id DESC')->fetchAll();
 ?>
 <!doctype html>
 <html lang="vi">
